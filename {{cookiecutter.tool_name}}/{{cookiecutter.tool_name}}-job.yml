@@ -2,7 +2,8 @@
 
 input1:
   class: File
-  format: [edam:format_{{cookiecutter.input_format}}]
+  # Path has to be relative to location of this yaml file
   path: {{cookiecutter.input_path}}
+#  format: http://edamontology.org/format_XXXX
 
 outfile_name: "{{cookiecutter.outfile_name}}"

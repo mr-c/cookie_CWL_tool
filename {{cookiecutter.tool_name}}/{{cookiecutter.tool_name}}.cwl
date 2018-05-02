@@ -9,29 +9,28 @@ doc: |
   {{cookiecutter.tool_doc}}
 
 
-hints:
-  - class: SoftwareRequirement
+#hints:
+#  - class: SoftwareRequirement
   ## List dependencies with short names
-    packages:
-      {{cookiecutter.required_package}}:
-        specs: ["{{cookiecutter.SciCrunch}}"]
-        version: ["{{cookiecutter.software_version}}"]
+#    packages:
+#      Software name here:
+#        specs: ["Provide SciCrunch identifier for required software"]
+#        version: ["Include a list of versions that are known to work with this description"]
 
 
 requirements:
   - class: DockerRequirement
     dockerPull: {{cookiecutter.dockerPull}}
-
-  - class: InlineJavascriptRequirement
+#  - class: InlineJavascriptRequirement
 
 
 inputs:
   input1:
     type: File
-    format: [edam:format_{{cookiecutter.input_format}}]
+#    format: [edam:format_XXXX]
     inputBinding:
       position: {{cookiecutter.input_position}}
-      prefix: {{cookiecutter.input_prefix}}
+#      prefix: -i
     doc: |
       {{cookiecutter.input_doc}}
 
@@ -44,7 +43,7 @@ inputs:
 outputs:
   output1:
     type: stdout
-    format: edam:format_{{cookiecutter.output_format}}
+#    format: [edam:format_XXXX]
 
 stdout: $(inputs.outfile_name)
 
@@ -108,4 +107,4 @@ s:author:
 
 # Include a license
 s:license: {{cookiecutter.license}}
-s:copyrightHolder:{{cookiecutter.copyright_holder}}
+s:copyrightHolder: {{cookiecutter.copyright_holder}}
