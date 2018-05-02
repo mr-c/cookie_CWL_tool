@@ -1,0 +1,8 @@
+# Job file for {{cookiecutter.tool_name}}.cwl
+
+input1:
+  class: File
+  format: [edam:format_{{cookiecutter.input_format}}]
+  path: {{cookiecutter.input_path}}
+
+outfile_name: "{{cookiecutter.outfile_name}}"

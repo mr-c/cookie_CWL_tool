@@ -1,7 +1,7 @@
 #!/usr/bin/env cwl-runner
 
 cwlVersion: {{cookiecutter.cwl_version}}
-class: {{cookiecutter.cwl_class}}
+class: CommandLineTool
 
 label: {{cookiecutter.tool_label}}
 
@@ -27,7 +27,7 @@ requirements:
 
 inputs:
   input1:
-    type: {{cookiecutter.input_type}}
+    type: File
     format: [edam:format_{{cookiecutter.input_format}}]
     inputBinding:
       position: {{cookiecutter.input_position}}
